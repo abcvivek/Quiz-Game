@@ -1,0 +1,192 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en"  >
+
+ <head>
+   <title>Home-Quiz Game </title>
+  <meta name="viewport" content="width=device-width,intial-scale=1">
+<meta http-equiv="Content-Type" content="text/html">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+crossorigin="anonymous"></script>
+<!-- <script src="/js/bootstrap.js"></script> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/img/myicon_16.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_32.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_64.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_128.ico"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<style>
+  
+  .background {
+  
+  margin-top : 80px;
+  height : 400px;
+  background-image: linear-gradient(90deg,rgb(255,0,0),rgb(0,0,0));
+  border-radius: 50px;
+  max-width: 800px;
+
+  }
+
+  #questionBackground {
+
+    position : relative;
+    top : 80px;
+    float : none;
+    background: #7F00FF;  
+    background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  
+    background: linear-gradient(to right, #E100FF, #7F00FF); 
+    border-radius: 25px;
+    width : 60%;
+  }
+
+  #questionText {
+    font-size: 18px;
+    text-align: center;
+    color : rgb(255,255,255);
+    padding : 10px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  #answerText {
+    font-size: 16px;
+    text-align: center;
+    color : rgb(255,255,255);
+    padding : 10px;
+   background: #C33764;  
+   background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+   background: linear-gradient(to right, #1D2671, #C33764); 
+    margin-top: 120px;
+    border-radius: 25px;
+    width : 80%;
+  }
+
+  #answerText1 {
+    text-align: center;
+    font-size: 16px;
+    color : rgb(255,255,255);
+    padding : 10px;
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764); 
+    position: relative;
+    margin-top: 40px;
+    border-radius: 25px;
+    width : 80%;
+  }
+
+  #nextButton {
+
+    position: relative;
+    margin-top: 30px;
+    width : 20%;
+    border-radius: 25px;
+  }
+
+   
+  button:focus {
+    outline : 0 !important;
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    .background {
+      height: 100%;
+      max-width: 100%;
+      margin-top: 50px;
+    } 
+
+    .firstAnswer {
+      margin-top: 80px;
+    }
+
+    #answerText {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    #answerText1 {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+
+    #questionText {
+      font-size: 14px;
+      padding-top: 10px;
+      padding-top: 10px;
+      margin-bottom: -30px; 
+    }
+
+    #questionBackground {
+      width : 95%;
+      top : 50px;
+    }
+
+  } 
+ 
+</style>
+</head>
+
+<body style="background-color:rgb(240, 240, 240);" >
+
+
+ <div class="container background">
+   
+  <div class="row">
+    <div class="col-xs-12 center-block" id="questionBackground" >
+      <h3 id="questionText"><strong>What is the name of vivek</strong></h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12 center-block questionAnswers">
+         <button id="answerText" class="btn btn-warning center-block" style="margin-top: 120px;" value="1" onclick="playAudio()"><strong>Answer1</strong></button>
+    </div>
+
+    <div class="col-md-6 col-xs-12 center-block questionAnswers"">
+         <button id="answerText" class="btn btn-warning center-block answer2" value="2" onclick="playAudio()"><strong>Answer2</strong></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12 center-block questionAnswers">
+         <button id="answerText1" class="btn btn-warning center-block" value="3" onclick="playAudio()"><strong>Answer3</strong></button>
+    </div>
+
+    <div class="col-md-6 col-xs-12 center-block questionAnswers"">
+         <button id="answerText1" class="btn btn-warning center-block answer4" style="margin-bottom : 30px;" value="4" onclick="playAudio()"><strong>Answer4</strong></button>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <button class="btn btn-primary center-block" id="nextButton" onclick="playAudio1()"><strong>NEXT</strong></button>
+ </div>
+
+ <div class="container">
+  <a href="index.html"><button class="btn btn-danger center-block" id="nextButton"><strong>EXIT</strong></button></a>
+ </div>
+
+<audio id="myAudio">
+  <source src="wrightanswer.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="nextSong">
+  <source src="nextquestion.mp3" type="audio/mpeg">
+</audio>
+
+
+<script type="text/javascript" src="app.js"></script>
+ 
+</body>
+</html>

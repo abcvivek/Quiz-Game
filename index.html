@@ -1,0 +1,116 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en" >
+
+ <head>
+   <title>Home-Quiz Game </title>
+  <meta name="viewport" content="width=device-width,intial-scale=1">
+<meta http-equiv="Content-Type" content="text/html">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+crossorigin="anonymous"></script>
+<!-- <script src="/js/bootstrap.js"></script> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/img/myicon_16.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_32.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_64.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/img/myicon_128.ico"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<style>
+  
+  .background {
+  
+  margin-top : 80px;
+  height : 100%;
+  background-image: linear-gradient(90deg,rgb(255,0,0),rgb(0,0,0));
+  border-radius: 50px;
+  max-width: 700px;
+
+  }
+
+  #enter-button {
+ 
+  border-radius : 50px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .quiz-image {
+    
+    -webkit-animation : slideRight 1s ease-in-out 1;
+    -moz-animation : slideRight 1s ease-in-out 1;
+    -o-animation : slideRight 1s ease-in-out 1;
+}
+
+@keyframes slideRight {
+
+    0% {
+        -webkit-transform: translateY(-150%);
+        -moz-transform: translateY(-150%);
+        -o-transform: translateY(-150%);
+    }
+    50%{
+        -webkit-transform: translateY(8%);
+        -moz-transform: translateY(8%);
+        -o-transform: translateY(8%);
+    }
+    65%{
+        -webkit-transform: translateY(-4%);
+        -moz-transform: translateY(-4%);
+        -o-transform: translateY(-4%);
+    }
+    80%{
+        -webkit-transform: translateY(4%);
+        -moz-transform: translateY(4%);
+        -o-transform: translateY(4%);
+    }
+    95%{
+        -webkit-transform: translateY(-2%);
+         -moz-transform: translateY(-2%);
+          -o-transform: translateY(-2%);
+    }               
+    100% {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }   
+
+}
+
+
+  @media screen and (max-width: 767px) {
+
+    .background {
+      margin-top: 20px;
+    }
+
+   }
+
+</style>
+
+</head>
+
+<body style="background-color:rgb(240, 240, 240);" >
+ <div class="container background">
+   
+ <img src="quiz.png" class="img img-responsive center-block quiz-image" alt="quiz-image" style="margin-top: 70px;"> 
+
+
+ <a href="quizPage.html"><button class="btn btn-default btn-lg center-block" id="enter-button"><strong>Enter &nbsp; :)</strong></button></a>
+
+ </div>
+ 
+
+<iframe src="kbcintro.mp3" allow="autoplay" hidden="true" loop="false">
+</body>
+</html>
